@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+## [0.12.0] - 2023-02-14
+
+### Changed
+
+- Bumped minimum required ruby version to 2.7.4.
+
+
 ### Changed
 
 - Bumped minimum required ruby version to 3.0.
