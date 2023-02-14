@@ -1,7 +1,7 @@
 require 'faraday'
 
 # frozen_string_literal: true
-RSpec.describe MicrosoftKiotaFaraday do
+RSpec.describe MicrosoftKiotaFaradayRights do
     it "decodes encoded query parameters" do
         values = Hash.new
         values["?%24select=diplayName&api%2Dversion=2"] = "?$select=diplayName&api-version=2"
@@ -10,7 +10,7 @@ RSpec.describe MicrosoftKiotaFaraday do
         values["/api-version/?%24select=diplayName&api%2Eversion=2"] = "/api-version/?$select=diplayName&api.version=2"
         values[""] = ""
 
-        handler = MicrosoftKiotaFaraday::Middleware::ParametersNameDecodingHandler.new()
+        handler = MicrosoftKiotaFaradayRights::Middleware::ParametersNameDecodingHandler.new()
         values.each do |key, value|
             env = {
                 url: URI.parse("https://graph.microsoft.com/v1.0/users#{key}")
@@ -28,8 +28,8 @@ RSpec.describe MicrosoftKiotaFaraday do
         values["/api-version/?%24select=diplayName&api%2Eversion=2"] = "/api-version/?%24select=diplayName&api%2Eversion=2"
         values[""] = ""
 
-        option = MicrosoftKiotaFaraday::Middleware::ParametersNameDecodingOption.new(false)
-        handler = MicrosoftKiotaFaraday::Middleware::ParametersNameDecodingHandler.new()
+        option = MicrosoftKiotaFaradayRights::Middleware::ParametersNameDecodingOption.new(false)
+        handler = MicrosoftKiotaFaradayRights::Middleware::ParametersNameDecodingHandler.new()
         values.each do |key, value|
             env = {
                 url: URI.parse("https://graph.microsoft.com/v1.0/users#{key}"),

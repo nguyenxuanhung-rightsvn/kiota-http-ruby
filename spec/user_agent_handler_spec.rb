@@ -1,11 +1,11 @@
 require 'faraday'
 
 # frozen_string_literal: true
-RSpec.describe MicrosoftKiotaFaraday do
+RSpec.describe MicrosoftKiotaFaradayRights do
 	user_agent_key = "User-Agent"
 	url = "https://graph.microsoft.com/v1.0/users"
     it "adds the user agent product" do
-        handler = MicrosoftKiotaFaraday::Middleware::UserAgentHandler.new()
+        handler = MicrosoftKiotaFaradayRights::Middleware::UserAgentHandler.new()
         env = {
             url: URI.parse(url),
             request_headers: {}
@@ -15,7 +15,7 @@ RSpec.describe MicrosoftKiotaFaraday do
     end
 
     it "adds the user agent product once" do
-        handler = MicrosoftKiotaFaraday::Middleware::UserAgentHandler.new()
+        handler = MicrosoftKiotaFaradayRights::Middleware::UserAgentHandler.new()
         env = {
             url: URI.parse(url),
             request_headers: {}
@@ -25,8 +25,8 @@ RSpec.describe MicrosoftKiotaFaraday do
         expect(env[:request_headers][user_agent_key].split("kiota-ruby").length).to eq(2)
     end
     it "doesnt add the header when disabled" do
-        handler = MicrosoftKiotaFaraday::Middleware::UserAgentHandler.new()
-		opt = MicrosoftKiotaFaraday::Middleware::UserAgentOption.new()
+        handler = MicrosoftKiotaFaradayRights::Middleware::UserAgentHandler.new()
+		opt = MicrosoftKiotaFaradayRights::Middleware::UserAgentOption.new()
 		opt.enabled = false
         env = {
             url: URI.parse(url),

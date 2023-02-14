@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 require 'microsoft_kiota_abstractions'
 require_relative '../version.rb'
-module MicrosoftKiotaFaraday
+module MicrosoftKiotaFaradayRights
     module Middleware
         class UserAgentOption
             include MicrosoftKiotaAbstractions::RequestOption
@@ -9,7 +9,7 @@ module MicrosoftKiotaFaraday
 			def initialize()
 				@enabled = true
 				@product_name = "kiota-ruby"
-				@product_version = MicrosoftKiotaFaraday::VERSION
+				@product_version = MicrosoftKiotaFaradayRights::VERSION
 			end
 
 			def get_key()

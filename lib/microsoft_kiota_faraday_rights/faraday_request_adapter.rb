@@ -4,7 +4,7 @@ require 'net/http'
 require_relative 'kiota_client_factory'
 require_relative 'middleware/response_handler_option'
 
-module MicrosoftKiotaFaraday
+module MicrosoftKiotaFaradayRights
   class FaradayRequestAdapter
     include MicrosoftKiotaAbstractions::RequestAdapter
 
@@ -62,7 +62,7 @@ module MicrosoftKiotaFaraday
     end
 
     def get_response_handler(request_info)
-      option = request_info.get_request_option(MicrosoftKiotaFaraday::Middleware::ResponseHandlerOption::RESPONSE_HANDLER_KEY) unless request_info.nil?
+      option = request_info.get_request_option(MicrosoftKiotaFaradayRights::Middleware::ResponseHandlerOption::RESPONSE_HANDLER_KEY) unless request_info.nil?
       return option.async_callback unless !option || option.nil?
     end
 

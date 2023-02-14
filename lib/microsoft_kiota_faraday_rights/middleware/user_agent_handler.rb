@@ -1,6 +1,6 @@
 require 'faraday'
 require_relative 'user_agent_option'
-module MicrosoftKiotaFaraday
+module MicrosoftKiotaFaradayRights
     module Middleware
         class UserAgentHandler < Faraday::Middleware
             @@default_option = UserAgentOption.new

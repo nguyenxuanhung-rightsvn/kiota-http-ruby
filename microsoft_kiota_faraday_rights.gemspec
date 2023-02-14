@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require_relative "lib/microsoft_kiota_faraday/version"
+require_relative "lib/microsoft_kiota_faraday_rights/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "microsoft_kiota_faraday"
-  spec.version       = MicrosoftKiotaFaraday::VERSION
+  spec.name          = "microsoft_kiota_faraday_rights"
+  spec.version       = MicrosoftKiotaFaradayRights::VERSION
   spec.authors       = 'Microsoft Corporation'
   spec.email         = 'graphsdkpub+ruby@microsoft.com'
   spec.description   = 'Kiota HttpCore implementation with Faraday'

@@ -1,0 +1,13 @@
+# frozen_string_literal: true
+
+require_relative 'microsoft_kiota_faraday_rights/version'
+require_relative 'microsoft_kiota_faraday_rights/middleware/response_handler_option'
+require_relative 'microsoft_kiota_faraday_rights/middleware/parameters_name_decoding_option'
+require_relative 'microsoft_kiota_faraday_rights/middleware/parameters_name_decoding_handler'
+require_relative 'microsoft_kiota_faraday_rights/middleware/user_agent_option'
+require_relative 'microsoft_kiota_faraday_rights/middleware/user_agent_handler'
+require_relative 'microsoft_kiota_faraday_rights/kiota_client_factory'
+require_relative 'microsoft_kiota_faraday_rights/faraday_request_adapter'
+
+module MicrosoftKiotaFaradayRights
+end

@@ -1,6 +1,6 @@
 require 'faraday'
 require_relative 'parameters_name_decoding_option'
-module MicrosoftKiotaFaraday
+module MicrosoftKiotaFaradayRights
     module Middleware
         class ParametersNameDecodingHandler < Faraday::Middleware
             @@default_option = ParametersNameDecodingOption.new

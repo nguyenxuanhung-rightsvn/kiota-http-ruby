@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 require 'microsoft_kiota_abstractions'
-module MicrosoftKiotaFaraday
+module MicrosoftKiotaFaradayRights
     module Middleware
         class ResponseHandlerOption
             RESPONSE_HANDLER_KEY = "responseHandler"
