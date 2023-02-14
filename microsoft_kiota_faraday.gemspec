@@ -29,7 +29,7 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
   spec.add_runtime_dependency 'microsoft_kiota_abstractions', '~> 0.13.0', '>= 0.13.0'
-  spec.add_runtime_dependency 'faraday', '~> 2.7', '>= 2.7.2'
+  spec.add_runtime_dependency 'faraday', '>= 0.17.3', '< 3.a'
   spec.add_development_dependency 'rake', '~> 13.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
   spec.add_development_dependency 'rubocop'
